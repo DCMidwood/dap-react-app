@@ -2,6 +2,8 @@ import { useState } from "react";
 import Reports from "./components/Reports";
 import ProjectWorkpack from "./components/ProjectWorkpack/ProjectWorkpack";
 
+import WebMap from "./components/Map/WebMap";
+
 function App() {
   const reports = [
     {
@@ -44,6 +46,7 @@ function App() {
         reportName={reports[1].title}
         reportDescription={reports[1].description}
       />
+      <WebMap />
     </div>
   );
 }
