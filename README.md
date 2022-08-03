@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# dap react act
 User Interface for 
 
 Trello Board for this project:
@@ -6,11 +6,27 @@ https://trello.com/b/VpsMZOmF/dap-react-app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Getting started
 
-In the project directory, you can run:
+To start, run the following steps
 
-### `npm start`
+1. Clone the repo.
+   ```bash
+   git clone https://github.com/DCMidwood/dap-react-app.git
+   ```
+2. Move into the directory where we have the project files.
+   ```bash
+   cd dap-react-app
+   ```
+3. Install the dependencies.
+   ```bash
+   npm install
+   ```
+
+4. Run the app in the development mode.
+   ```bash
+   npm start
+   ```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -18,6 +34,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+For future
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
