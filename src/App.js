@@ -4,6 +4,7 @@ import ReportsList from "./components/Reports/ReportsList";
 import ProjectWorkpack from "./components/ProjectWorkpack/ProjectWorkpack";
 
 import ListReports from "./reports_list.json"
+import ListProjectWorkpacks from "./projects_list.json"
 
 import WebMap from "./components/Map/WebMap";
 
@@ -21,6 +22,7 @@ function App() {
   return (
     <div>
       <ProjectWorkpack
+        listProjectWorkpacks= {ListProjectWorkpacks}
         selectedProjectWorkpack={dropdownProjectWorkpack}
         onDropdwonChange={dropdownChangeHandler}
       />

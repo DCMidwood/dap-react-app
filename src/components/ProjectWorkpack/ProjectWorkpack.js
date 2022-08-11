@@ -15,10 +15,8 @@ const ProjectWorkpack = (props) => {
           value={props.selectedProjectWorkpack}
           onChange={dropdownChangeHandler}
         >
-          <option value={"Project A: WorkpackA"}>Project A: WorkpackA</option>
-          <option value={"Project A: WorkpackB"}>Project A: WorkpackB</option>
-          <option value={"Project B: WorkpackA"}>Project B: WorkpackA</option>
-          <option value={"Project C: WorkpackD"}>Project C: WorkpackD</option>
+          {props.listProjectWorkpacks.map ((projectWorkpack) => <option key={projectWorkpack.id} value={projectWorkpack.id}>{projectWorkpack.name}</option>) }
+
         </select>
       </div>
     </div>

@@ -1,18 +1,22 @@
 [
     {
        "id":1,
-       "name":"Project A: WorkpackA",
+       "name":"Project A: WorkpackA"
     },
     {
        "id":2,
-       "name":"Project A: WorkpackB",
+       "name":"Project A: WorkpackB"
     },
     {
        "id":3,
-       "name":"Project B: WorkpackA",
+       "name":"Project B: WorkpackA"
     },
     {
         "id":4,
-        "name":"Project C: WorkpackD",
-     }
+        "name":"Project C: WorkpackD"
+     },
+     {
+         "id":5,
+         "name":"Project  Z: WorkpackZ"
+      }
  ]
