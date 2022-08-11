@@ -4,44 +4,7 @@ import Map from "@arcgis/core/Map";
 import MapView from "@arcgis/core/views/MapView";
 import GeoJSONLayer from "@arcgis/core/layers/GeoJSONLayer";
 
-const geojson = {
-    "type": "FeatureCollection",
-    "features": [
-      {
-        "type": "Feature",
-        "properties": {},
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -2.6676177978515625,
-            54.195989325475125
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {},
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -2.6646995544433594,
-            54.199805275949814
-          ]
-        }
-      },
-      {
-        "type": "Feature",
-        "properties": {},
-        "geometry": {
-          "type": "Point",
-          "coordinates": [
-            -2.6719093322753906,
-            54.19377992993876
-          ]
-        }
-      }
-    ]
-  };
+import TurbineLayouts from "./turbines.json"
 
   const renderer = {
     type: "simple",
@@ -55,7 +18,7 @@ const geojson = {
       }}
     };
 
-  const blob = new Blob([JSON.stringify(geojson)], {
+  const blob = new Blob([JSON.stringify(TurbineLayouts)], {
     type: "application/json"
   });
   const url = URL.createObjectURL(blob);
@@ -82,7 +45,7 @@ const WebMap = () => {
                     layers: [geojson_layer]
                 }),
                 center: [-2.67, 54.19],
-                zoom: 11
+                zoom: 10.5
             });
         },
         []
