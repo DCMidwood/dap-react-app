@@ -1,0 +1,11 @@
+.reports {
+    margin: 2rem auto;
+    width: 40%;
+    max-width: 40rem;
+    background-color: ghostwhite;
+  }
+
+.reports ul {
+    list-style: none;
+    padding: 1rem;
+  }

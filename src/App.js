@@ -1,8 +1,9 @@
 import { useState } from "react";
-import Reports from "./components/Reports";
+
+import ReportsList from "./components/Reports/ReportsList";
 import ProjectWorkpack from "./components/ProjectWorkpack/ProjectWorkpack";
 
-import ReportsList from "./reports_list.json"
+import ListReports from "./reports_list.json"
 
 import WebMap from "./components/Map/WebMap";
 
@@ -23,18 +24,10 @@ function App() {
         selectedProjectWorkpack={dropdownProjectWorkpack}
         onDropdwonChange={dropdownChangeHandler}
       />
-      <h2>Reports</h2>
-
       <br /><br/>
-      {
-      ReportsList.map(report => {
-        return (
-          <Reports
-            reportName = {report.title}
-            reportDescription= {report.description}
-            />
-        )
-      })}
+
+      <ReportsList reportsList ={ListReports} />
+      <br /><br/>
       <WebMap />
     </div>
   );

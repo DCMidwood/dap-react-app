@@ -1,12 +1,12 @@
 import "./Reports.css";
 
-function Reports(props) {
+const Reports = (props) => {
   const reportName = props.reportName;
   const reportDescription = props.reportDescription;
 
   return (
     <div className="report-item">
-      {reportName}: {reportDescription}
+      <strong>{reportName}</strong>: {reportDescription}
       <button>Run Report</button>
     </div>
   );
