@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import MainHeader from './components/MainHeader/MainHeader';
 import ReportsList from "./components/Reports/ReportsList";
 import ProjectWorkpack from "./components/ProjectWorkpack/ProjectWorkpack";
 
@@ -85,8 +86,11 @@ function App() {
 
   return (
     
-    <div>
-      <h1>DAP REACT APP</h1>
+    <React.Fragment>
+      <MainHeader  listProjectWorkpacks= {ListProjectWorkpacks}
+        selectedProjectWorkpack={dropdownProjectWorkpack}
+        onDropdwonChange={dropdownChangeHandler}/>
+      <main>
       <ProjectWorkpack
         listProjectWorkpacks= {ListProjectWorkpacks}
         selectedProjectWorkpack={dropdownProjectWorkpack}
@@ -108,7 +112,8 @@ function App() {
         />
       <br /><br/>
       <WebMap />
-    </div>
+      </main>
+      </React.Fragment>
   );
 }
 
