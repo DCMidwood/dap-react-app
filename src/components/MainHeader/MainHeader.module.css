@@ -7,8 +7,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #741188;
-  padding: 0 3rem;
+  background: rgb(201, 131, 131);
+  padding: 0 2rem;
 }
 
 .main-header h1 {
