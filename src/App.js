@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Fragment } from "react";
 
 import MainHeader from './components/MainHeader/MainHeader';
 import ReportsList from "./components/Reports/ReportsList";
 import ProjectWorkpack from "./components/ProjectWorkpack/ProjectWorkpack";
 
+import OutstandingTasksButton from "./components/Tasks/OutstandingTasksButton";
+import Order from "./components/Order/Order"
+
 import UserListDropdown from "./components/UserListDropdown";
 
 import WebMap from "./components/Map/WebMap";
+import Input from "./components/UI/Input";
+
 import {getUser, fetchUsers} from './services/UsersService';
 
 import ListReports from "./reports_list.json";
@@ -107,34 +113,43 @@ function App() {
 
   return (
     
-    <React.Fragment>
+    <Fragment>
       <MainHeader  listProjectWorkpacks= {ListProjectWorkpacks}
         selectedProjectWorkpack={dropdownProjectWorkpack}
         onDropdwonChange={dropdownChangeHandler}/>
       <main>
-      <ProjectWorkpack
-        listProjectWorkpacks= {ListProjectWorkpacks}
-        selectedProjectWorkpack={dropdownProjectWorkpack}
-        onDropdwonChange={dropdownChangeHandler}
-      />
-      <br /><br/>
-      {/* <h3>To do 
-        {data.map(item => (
-          <div>{item.id}</div>
-        ))}
-      </h3> */}
-
-      <UserListDropdown 
-        listUsers={users} 
-        selectedUser={dropdownUserSelected}
-        onDropdwonChange={userDropdownChangeHandler}/>
-      <ReportsList 
-        reportsList ={ListReports} 
+        <Order></Order>
+        <ProjectWorkpack
+          listProjectWorkpacks= {ListProjectWorkpacks}
+          selectedProjectWorkpack={dropdownProjectWorkpack}
+          onDropdwonChange={dropdownChangeHandler}
         />
-      <br /><br/>
-      <WebMap />
+        <br /><br/>
+        <OutstandingTasksButton />
+        <br/>
+        <Input label = "Add New Task" input = {{
+          id: "new task",
+          type: "text",
+          defaultValue: "Fix the turbibne"
+        }} />
+        <Input label = "Add New Quantity" input = {{
+          id: "new qty",
+          type: "number",
+          step: "1",
+          defaultValue: "1"
+        }} />
+
+        <UserListDropdown 
+          listUsers={users} 
+          selectedUser={dropdownUserSelected}
+          onDropdwonChange={userDropdownChangeHandler}/>
+        <ReportsList 
+          reportsList ={ListReports} 
+          />
+        <br /><br/>
+        <WebMap />
       </main>
-      </React.Fragment>
+      </Fragment>
   );
 }
 
