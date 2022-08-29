@@ -9,6 +9,8 @@ import ProjectWorkpack from "./components/ProjectWorkpack/ProjectWorkpack";
 import OutstandingTasksButton from "./components/Tasks/OutstandingTasksButton";
 import Order from "./components/Order/Order"
 
+import Materials from "./components/Materials/Materials";
+import Tasks from "./components/Tasks/Tasks";
 import UserListDropdown from "./components/UserListDropdown";
 
 import WebMap from "./components/Map/WebMap";
@@ -118,26 +120,14 @@ function App() {
         selectedProjectWorkpack={dropdownProjectWorkpack}
         onDropdwonChange={dropdownChangeHandler}/>
       <main>
-        <Order></Order>
+        {/* <Order></Order> */}
         <ProjectWorkpack
           listProjectWorkpacks= {ListProjectWorkpacks}
           selectedProjectWorkpack={dropdownProjectWorkpack}
           onDropdwonChange={dropdownChangeHandler}
         />
         <br /><br/>
-        <OutstandingTasksButton />
-        <br/>
-        <Input label = "Add New Task" input = {{
-          id: "new task",
-          type: "text",
-          defaultValue: "Fix the turbibne"
-        }} />
-        <Input label = "Add New Quantity" input = {{
-          id: "new qty",
-          type: "number",
-          step: "1",
-          defaultValue: "1"
-        }} />
+        <Tasks />
 
         <UserListDropdown 
           listUsers={users} 
@@ -148,6 +138,7 @@ function App() {
           />
         <br /><br/>
         <WebMap />
+        <Materials />
       </main>
       </Fragment>
   );
