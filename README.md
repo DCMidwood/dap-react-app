@@ -1,5 +1,6 @@
 # Getting Started with Create React App
-User Interface for 
+
+User Interface for
 
 Trello Board for this project:
 https://trello.com/b/VpsMZOmF/dap-react-app
@@ -17,6 +18,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+npm install @arcgis/core
 
 ### `npm test`
 
