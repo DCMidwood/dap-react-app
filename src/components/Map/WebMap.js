@@ -1,56 +1,62 @@
-import React, {useEffect, useRef} from "react";
+import React, { useEffect, useRef } from "react";
 
 import Map from "@arcgis/core/Map";
 import MapView from "@arcgis/core/views/MapView";
 import GeoJSONLayer from "@arcgis/core/layers/GeoJSONLayer";
 
-import TurbineLayouts from "./turbines.json"
+import TurbineLayouts from "./turbines.json";
 
-  const renderer = {
-    type: "simple",
-    symbol: {
-      type: "simple-marker",
-      color: "red",
-      size: 6,
-      
-      outline: {
-        color: "white"
-      }}
-    };
+import classes from "./WebMap.module.css";
 
-  const blob = new Blob([JSON.stringify(TurbineLayouts)], {
-    type: "application/json"
-  });
-  const url = URL.createObjectURL(blob);
-  const geojson_layer = new GeoJSONLayer({ 
-    url: url,
-    renderer: renderer});
+const renderer = {
+  type: "simple",
+  symbol: {
+    type: "simple-marker",
+    color: "red",
+    size: 6,
 
+    outline: {
+      color: "white",
+    },
+  },
+};
 
-const WebMap = () => {
-    const mapRef = useRef(null);
+const blob = new Blob([JSON.stringify(TurbineLayouts)], {
+  type: "application/json",
+});
+const url = URL.createObjectURL(blob);
+const geojson_layer = new GeoJSONLayer({
+  url: url,
+  renderer: renderer,
+});
 
-    useEffect(
-        ()=> {
+const WebMap = (props) => {
+  const mapRef = useRef(null);
 
-            // const geojsonLayer = new GeoJSONLayer({
-            //     url: geojson_layer,
-            //     renderer: renderer
-            // });
+  useEffect(() => {
+    // const geojsonLayer = new GeoJSONLayer({
+    //     url: geojson_layer,
+    //     renderer: renderer
+    // });
 
-            new MapView({
-                container: mapRef.current,
-                map: new Map({
-                    basemap: "dark-gray-vector",
-                    layers: [geojson_layer]
-                }),
-                center: [-2.67, 54.19],
-                zoom: 10.5
-            });
-        },
-        []
-    )
-    return <div ref={mapRef} style = {{ height: "40vh", width: "40%"}}/>
-}
+    console.log(props.latitude);
+    new MapView({
+      container: mapRef.current,
+      map: new Map({
+        basemap: "dark-gray-vector",
+        layers: [geojson_layer],
+      }),
+      center: [props.longitude, props.latitude],
+      zoom: 10.5,
+    });
+  }, [props.longitude, props.latitude]);
+  return (
+    <div
+      className={classes.map}
+      ref={mapRef}
+      style={{ height: "40vh", width: "40%" }}
+    />
+  );
+};
 
-export default WebMap
+export default WebMap;
