@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
 import Map from "@arcgis/core/Map";
+import Draw from "@arcgis/core/views/draw/Draw";
 import MapView from "@arcgis/core/views/MapView";
 import GeoJSONLayer from "@arcgis/core/layers/GeoJSONLayer";
 
@@ -34,13 +35,7 @@ const WebMap = (props) => {
   const mapRef = useRef(null);
 
   useEffect(() => {
-    // const geojsonLayer = new GeoJSONLayer({
-    //     url: geojson_layer,
-    //     renderer: renderer
-    // });
-
-    console.log(props.latitude);
-    new MapView({
+    const view = new MapView({
       container: mapRef.current,
       map: new Map({
         basemap: "dark-gray-vector",
@@ -49,7 +44,13 @@ const WebMap = (props) => {
       center: [props.longitude, props.latitude],
       zoom: 10.5,
     });
+
+    // view.ui.add("line-button", "top-left");
+    // const draw = new Draw({
+    //   view: view,
+    // });
   }, [props.longitude, props.latitude]);
+
   return (
     <div
       className={classes.map}
