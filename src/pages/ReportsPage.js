@@ -1,5 +1,5 @@
 import { Outlet, useNavigate } from "react-router-dom"
-import ReportList from "../components/Reports/ReportsList"
+import ReportList from "../components/reports/ReportsList"
 
 
 const ReportsPage = (props) => {

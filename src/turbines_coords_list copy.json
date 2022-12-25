@@ -4,8 +4,21 @@
     {
       "type": "Feature",
       "properties": {
-        "globalid": 
+        "globalid": "",
+        "projectGlobalid": "",
+        "name": "T01"
       },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.7033233642578125,
+          54.22108779704994
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
       "geometry": {
         "type": "Point",
         "coordinates": [
