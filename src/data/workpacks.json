@@ -1,0 +1,22 @@
+{
+    "workpacks": [
+        {
+            "name": "Newbiggin",
+            "globalid": "{4b232699-e912-4aec-afda-bed4b0adbd6b}",
+            "status": 1,
+            "phase": 4
+        },
+        {
+            "name": "Hutton Roof",
+            "globalid": "{4e1ac199-6530-4bba-aa47-826b0a6e3d61}",
+            "status": 1,
+            "phase": 2
+        },
+        {
+            "globalid":"{e74d4f43-46c1-4326-aa6c-ef705c1b2e94}",
+            "name":"Project Titan",
+            "status": 2,
+            "phase": 5
+        }
+    ]
+}

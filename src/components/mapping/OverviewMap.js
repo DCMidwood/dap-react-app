@@ -5,8 +5,7 @@ import Draw from "@arcgis/core/views/draw/Draw";
 import MapView from "@arcgis/core/views/MapView";
 import GeoJSONLayer from "@arcgis/core/layers/GeoJSONLayer";
 
-import TurbineLayouts from "./turbines.json";
-
+import TurbineLayouts from "../../data/turbines.json"
 import classes from "./WebMap.module.css";
 
 const renderer = {
@@ -42,14 +41,14 @@ const WebMap = (props) => {
         layers: [geojson_layer],
       }),
       center: [props.longitude, props.latitude],
-      zoom: 10.5,
+      zoom: props.zoom,
     });
 
     // view.ui.add("line-button", "top-left");
     // const draw = new Draw({
     //   view: view,
     // });
-  }, [props.longitude, props.latitude]);
+  }, [props.longitude, props.latitude, props.zoom]);
 
   return (
     <div

@@ -1,4 +1,4 @@
-import Modal from "../UI/Modal";
+import Modal from "../../src/components/UI/Modal";
 import classes from "./Order.module.css"
 
 const Order = props => {

@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 
-import ProjectWorkpack from "../ProjectWorkpack/ProjectWorkpack";
 import Navigation from "./Navigation";
 import classes from "./MainHeader.module.css";
 import bannerImage from "../../assets/banner.jpg";
@@ -17,7 +16,7 @@ const MainHeader = (props) => {
         <img src={bannerImage} alt="banner" />
       </div>
     </Fragment>
-  );
+  ); 
 };
 
 export default MainHeader;

@@ -2,6 +2,12 @@
 
 User Interface for
 
+## Installs
+
+### `npm install @reduxjs/toolkit`
+
+### `npm install react-redux`
+
 Trello Board for this project:
 https://trello.com/b/VpsMZOmF/dap-react-app
 

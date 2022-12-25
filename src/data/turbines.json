@@ -2,7 +2,8 @@
   "type": "FeatureCollection",
   "features": [
     {
-      "id": 1,
+      "globalid": "{6a696382-f6dc-462b-b34f-813b07fd1fe2}",
+      "workpack_global_id": "{4e1ac199-6530-4bba-aa47-826b0a6e3d61}",
       "type": "Feature",
       "properties": {},
       "geometry": {
@@ -14,7 +15,8 @@
       }
     },
     {
-      "id": 2,
+      "globalid": "{9c7e1438-4c11-4b7d-9774-d65ad766a520}",
+      "workpack_global_id": "{4e1ac199-6530-4bba-aa47-826b0a6e3d61}",
       "type": "Feature",
       "properties": {},
       "geometry": {
@@ -26,7 +28,8 @@
       }
     },
     {
-      "id": 3,
+      "globalid": "{19df97ca-75db-4f5b-a9bc-ba1411fc57ab}",
+      "workpack_global_id": "{4e1ac199-6530-4bba-aa47-826b0a6e3d61}",
       "type": "Feature",
       "properties": {},
       "geometry": {
@@ -38,6 +41,8 @@
       }
     },
     {
+      "globalid": "{67096a33-0a42-4359-ab0c-afa6ace1aab5}",
+      "workpack_global_id": "{4b232699-e912-4aec-afda-bed4b0adbd6b}",
       "type": "Feature",
       "properties": {},
       "geometry": {
@@ -49,6 +54,8 @@
       }
     },
     {
+      "globalid": "{4ee6bf86-cb5c-465d-aa14-28b77445d334}",
+      "workpack_global_id": "{4b232699-e912-4aec-afda-bed4b0adbd6b}",
       "type": "Feature",
       "properties": {},
       "geometry": {
@@ -60,6 +67,8 @@
       }
     },
     {
+      "globalid": "{aeb43b6e-9a38-46ac-b212-0fe2cbc3ae2b}",
+      "workpack_global_id": "{4b232699-e912-4aec-afda-bed4b0adbd6b}",
       "type": "Feature",
       "properties": {},
       "geometry": {

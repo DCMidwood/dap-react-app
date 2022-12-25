@@ -1,9 +1,9 @@
-.project-workpack-dropdown {
+.dropdown {
   color: black;
   padding: 0 1rem;
 }
 
-.project-workpack-dropdown__control {
+.dropdown__control {
   display: flex;
   /* width: 100%; */
   align-items: center;
@@ -11,7 +11,7 @@
   margin: 1rem 0;
 }
 
-.project-workpack-dropdown__select {
+.dropdown__select {
   font: inherit;
   padding: 0.5rem 3rem;
   font-weight: bold;
